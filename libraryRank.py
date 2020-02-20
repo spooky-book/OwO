@@ -1,5 +1,5 @@
 # [{'book' : [ ], 'sign' : X , 'ship' :   Y }, ..............          ]
-# Formula used is (book score * books shippable per day) / (days taken to sign up library)
+# Formula used is (optimised book score) / (days taken to sign up library)
 from bookBooking import *
 # scores, bookFlag, library 
 score = 0

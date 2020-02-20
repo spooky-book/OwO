@@ -14,7 +14,7 @@ def read_input():
 
 	line = f.readline()
 
-	books_scores = line.split()
+	books_scores = list(map(int, line.split()))
 
 	library = {}
 
@@ -27,12 +27,20 @@ def read_input():
 		library[i]['signup'] = inputs[1]
 		library[i]['ship'] = inputs[2]
 		line = f.readline()
-		library[i]['books'] = line.split()
+		library[i]['books'] = list(map(int, line.split()))
 		i += 1
 
 	f.close()
 
 	return(no_books, no_libs, no_days, books_scores, library)
+
+def determine_high_score_lib(books_scores, library):
+	
+	for lib in library:
+		total_score = 0
+		for books in library[lib]['books']:
+			total_score += books_scores[books]
+		print(total_score)
 
 def main():
 
@@ -42,6 +50,7 @@ def main():
 	print(no_days)
 	print(books_scores)
 	print(library)
+	determine_high_score_lib(books_scores, library)
 
 
 if __name__ == "__main__":

@@ -36,6 +36,7 @@ while True:
         score *= lib['ship']
     if score >= parameter:
         SelectLibrary(lib)
+        bookFlag = flagCopy
     score = 0
     flagCopy = bookFlag
 

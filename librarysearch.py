@@ -6,6 +6,7 @@ delay = 1
 parameter = 0
 highest = 0
 i = 0
+# Initial calculation of scores for each library when no books have scanned
 for i in range(0, 1):
     for lib in library: 
         delay *= lib['sign']
@@ -15,7 +16,7 @@ for i in range(0, 1):
         highest = score
     score = 0
     delay = 1
-# 
+# Parameter can be optimised later on 
 parameter = 10
 while True:
     for lib in library: 

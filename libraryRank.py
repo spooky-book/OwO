@@ -9,6 +9,7 @@ highest = 0
 index = 0
 flagCopy = bookFLag
 i = 0
+exhausted = True
 
 # Initial calculation of scores for each library when no books have scanned
 for i in range(0, 1):
@@ -39,5 +40,11 @@ while True:
         bookFlag = flagCopy
     score = 0
     flagCopy = bookFlag
+    for elem in bookFlag:
+        if elem == False:
+            exhausted = False
+    if exhausted:
+        break
+        
 
 

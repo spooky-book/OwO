@@ -5,7 +5,9 @@ score = 0
 days = 1
 parameter = 0
 highest = 0
+index = 0
 i = 0
+
 # Initial calculation of scores for each library when no books have scanned
 for i in range(0, 1):
     for lib in library: 
@@ -14,8 +16,11 @@ for i in range(0, 1):
         score =/ days
     if score > highest:
         highest = score
+        index = lib
     score = 0
     days = 1
+    
+SelectLibrary(index) 
 # Parameter can be optimised later on 
 parameter = 10
 while True:

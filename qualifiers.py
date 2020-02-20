@@ -30,18 +30,18 @@ def read_input():
 		library[i]['books'] = line.split()
 		i += 1
 
-
 	f.close()
 
+	return(no_books, no_libs, no_days, books_scores, library)
+
+def main():
+
+	(no_books, no_libs, no_days, books_scores, library) = read_input()
 	print(no_books)
 	print(no_libs)
 	print(no_days)
 	print(books_scores)
 	print(library)
-
-def main():
-
-	read_input()
 
 
 if __name__ == "__main__":

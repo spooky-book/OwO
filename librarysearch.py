@@ -27,8 +27,8 @@ while True:
                 bookFlag[book] = True
         delay *= lib['ship'] 
         score =/ delay
-    if score > highest:
-        highest = score
+    if score > parameter:
+        parameter = score
     score = 0
     delay = 1
 

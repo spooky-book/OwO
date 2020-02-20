@@ -14,7 +14,7 @@ i = 0
 for i in range(0, 1):
     for lib in library: 
         days = lib['sign']
-        score = lib['ship']
+        score = lib['ship'] * (len(lib['book']))
         score =/ days
     if score > highest:
         highest = score
@@ -30,7 +30,7 @@ while True:
         days = lib['sign']
         for book in lib['book']:
             if flagCopy[book] == False:
-                score += 1
+                score += scores[book]
                 flagCopy[book] = True
         score =/ days
         score *= lib['ship']

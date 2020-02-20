@@ -23,8 +23,8 @@ for i in range(0, 1):
     days = 1
     
 SelectLibrary(index) 
-# Parameter can be optimised later on 
-parameter = 10
+# Parameter can be fine tuned based on experimentation 
+parameter = 5
 while True:
     for lib in library: 
         days = lib['sign']

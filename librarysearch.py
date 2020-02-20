@@ -32,8 +32,8 @@ while True:
                 bookFlag[book] = True
         days *= lib['ship'] 
         score =/ delay
-    if score > parameter:
-        parameter = score
+    if score >= parameter:
+        SelectLibrary(lib)
     score = 0
 
 

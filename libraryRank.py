@@ -14,7 +14,7 @@ i = 0
 for i in range(0, 1):
     for lib in library: 
         days = lib['sign']
-        score = lib['ship'] * (len(lib['book']))
+        score = (len(lib['book']))/lib['ship'] + score % lib['ship']
         score =/ days
     if score > highest:
         highest = score
@@ -32,8 +32,8 @@ while True:
             if flagCopy[book] == False:
                 score += scores[book]
                 flagCopy[book] = True
-        score =/ days
-        score *= lib['ship']
+        score = score/lib['ship'] + score % lib['ship']
+        score /= days
     if score >= parameter:
         SelectLibrary(lib)
         bookFlag = flagCopy
